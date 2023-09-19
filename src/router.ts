@@ -1,19 +1,29 @@
-import { createRouter, createWebHistory } from 'vue-router'
+import { RouteRecordRaw, createRouter, createWebHistory } from 'vue-router'
 import Seance1Vue from './views/Seance1.vue'
 import Seance2Vue from './views/Seance2.vue'
+import Seance3Vue from './views/Seance3.vue'
+
+export const routes: RouteRecordRaw[] = [
+  {
+    path: '/',
+    component: Seance1Vue,
+    name: 'Seance 1'
+  },
+  {
+    path: '/seance2',
+    component: Seance2Vue,
+    name: 'Seance 2'
+  },
+  {
+    path: '/seance3',
+    component: Seance3Vue,
+    name: 'Seance 3'
+  }
+]
 
 const router = createRouter({
     history: createWebHistory(import.meta.env.BASE_URL),
-    routes: [
-        {
-            path: '/',
-            component: Seance1Vue
-        },
-        {
-            path: '/seance2',
-            component: Seance2Vue
-        }
-    ]
+    routes
 })
 
 export default router
