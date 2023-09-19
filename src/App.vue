@@ -1,12 +1,27 @@
 <script setup lang="ts">
-import { RouterView } from 'vue-router'
+import { RouterView, RouterLink } from 'vue-router'
+import { routes } from './router';
 </script>
 
 <template>
+  <nav>
+    <router-link
+      v-for="route in routes"
+      :to="{ name: route.name, path: route.path }"
+    >
+      {{ route.name }}
+    </router-link>
+  </nav>
   <RouterView />
 </template>
 
 <style scoped>
+
+nav {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+}
 .logo {
   height: 6em;
   padding: 1.5em;
