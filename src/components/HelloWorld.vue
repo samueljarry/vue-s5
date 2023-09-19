@@ -7,9 +7,11 @@ const notes: { [key: string]: number } = {
 </script>
 
 <template>
-    <div v-for="matiere in Object.keys(notes)">
-    <span>Note en {{ matiere }}: {{ notes[matiere] }}</span>
-  </div>
+
+<div v-for="matiere in Object.keys(notes)">
+  <span>Note en {{ matiere }}: {{ notes[matiere] }}</span>
+</div>
+
 </template>
 
 <style scoped>
