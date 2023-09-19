@@ -35,7 +35,7 @@
 
     <div v-for="note in randArray">
       <span>
-        Note: <span v-bind:class="note > 10 ? 'green' : 'red'">{{ note }}</span>
+        Note: <span v-bind:class="note >= 10 ? 'green' : 'red'">{{ note }}</span>
       </span>
     </div>
   </section>

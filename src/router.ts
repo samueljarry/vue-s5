@@ -1,13 +1,13 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import HelloWorldVue from './components/HelloWorld.vue'
-import Seance2Vue from './components/Seance2.vue'
+import Seance1Vue from './views/Seance1.vue'
+import Seance2Vue from './views/Seance2.vue'
 
 const router = createRouter({
     history: createWebHistory(import.meta.env.BASE_URL),
     routes: [
         {
             path: '/',
-            component: HelloWorldVue
+            component: Seance1Vue
         },
         {
             path: '/seance2',
