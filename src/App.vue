@@ -7,7 +7,7 @@ import { routes } from './router';
   <nav>
     <router-link
       v-for="route in routes"
-      :to="{ name: route.name }"
+      :to="{ name: route.name, path: route.path }"
     >
       {{ route.name }}
     </router-link>

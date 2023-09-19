@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { onMounted, ref } from 'vue';
+import Pokemon from '../components/Pokemon.vue';
   type Data = {
     count: number;
     next: string | null;
@@ -19,7 +20,6 @@ import { onMounted, ref } from 'vue';
     const datas: Data = await fetch('https://pokeapi.co/api/v2/pokemon/')
       .then(res => res.json());
     
-
     for(const data of datas.results) {
       const pokemon = await fetch(data.url).then(res => res.json())
       fetchedDatas.value.push(pokemon)
@@ -29,9 +29,10 @@ import { onMounted, ref } from 'vue';
 
 <template>
   <section>
-    <div v-for="pokemon in fetchedDatas">
-      <img v-bind:src="pokemon.sprites['front_default']" />
-      {{ pokemon.name }}
-    </div>
+    <Pokemon 
+      v-for="pokemon in fetchedDatas" 
+      :name="pokemon.name" 
+      :sprites="pokemon.sprites" 
+    />
   </section>
 </template>
