@@ -7,17 +7,17 @@ export const routes: RouteRecordRaw[] = [
   {
     path: '/',
     component: Seance1Vue,
-    name: 'Séance 1'
+    name: 'Accueil'
   },
   {
     path: '/seance2',
     component: Seance2Vue,
-    name: 'Séance 2'
+    name: 'Boucles'
   },
   {
     path: '/seance3',
     component: Seance3Vue,
-    name: 'Séance 3'
+    name: 'API'
   }
 ]
 
